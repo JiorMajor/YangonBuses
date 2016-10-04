@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/xml/dummy_tabs_five.xml",
+        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/src/androidTest/res/xml/dummy_tabs_five.xml"
+    },
+    {
+        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/xml/dummy_tabs_three.xml",
+        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/src/androidTest/res/xml/dummy_tabs_three.xml"
+    }
+]

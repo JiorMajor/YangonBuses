@@ -1,0 +1,9 @@
+<fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.chanpyaeaung.yangonbuses.fragments.MainTabFragment"
+    tools:layout="@layout/fragment_main_tab"
+    android:id="@+id/fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    />

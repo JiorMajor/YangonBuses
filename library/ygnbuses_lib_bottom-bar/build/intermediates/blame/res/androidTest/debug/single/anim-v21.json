@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/design/24.2.1/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/design/24.2.1/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/anim-v21/design_appbar_state_list_animator.xml",
+        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/design/24.2.1/res/anim-v21/design_appbar_state_list_animator.xml"
+    }
+]
