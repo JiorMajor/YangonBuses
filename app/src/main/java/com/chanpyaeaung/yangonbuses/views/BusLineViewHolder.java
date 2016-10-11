@@ -15,11 +15,11 @@ import butterknife.ButterKnife;
 
 public class BusLineViewHolder extends RecyclerView.ViewHolder {
 
-    public @BindView(R.id.tvBusLine) TextView tvBusLine;
-    public @BindView(R.id.tvCompany) TextView tvCompany;
+    public TextView tvCompany, tvBusLine;
 
     public BusLineViewHolder(View itemView) {
         super(itemView);
-        ButterKnife.bind(this, itemView);
+        tvBusLine = (TextView) itemView.findViewById(R.id.tvBusLine);
+        tvCompany = (TextView) itemView.findViewById(R.id.tvCompany);
     }
 }

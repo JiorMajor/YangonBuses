@@ -21,17 +21,9 @@ import com.roughike.bottombar.OnTabSelectListener;
 public class MainTabFragment extends Fragment {
 
     private View v;
-    private BottomBar bottomBar;
-    private FrameLayout frameLayout;
-
 
     public MainTabFragment() {
         // Required empty public constructor
-    }
-
-    private void initUI() {
-        bottomBar = (BottomBar) v.findViewById(R.id.bottom_bar);
-        frameLayout = (FrameLayout) v.findViewById(R.id.frame_layout);
     }
 
     @Override
@@ -45,30 +37,5 @@ public class MainTabFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        initUI();
-
-        bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
-            @Override
-            public void onTabSelected(@IdRes int tabId) {
-                String name = "";
-                switch (tabId) {
-                    case R.id.tab_buses:
-                        name = "Buses";
-                        break;
-                    case R.id.tab_bus_stop:
-                        name = "Bus Stop";
-                        break;
-                    case R.id.tab_places:
-                        name = "Places";
-                        break;
-                    case R.id.tab_more:
-                        name = "More";
-                        break;
-                    default:
-                        break;
-                }
-                Toast.makeText(getActivity(), name, Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 }

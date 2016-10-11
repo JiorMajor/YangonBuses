@@ -48,12 +48,12 @@
         "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
-        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/drawable/abc_ratingbar_indicator_material.xml",
-        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ratingbar_indicator_material.xml"
-    },
-    {
         "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/drawable/abc_seekbar_tick_mark_material.xml",
         "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
         "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/drawable/design_ic_visibility.xml",
