@@ -1,13 +1,10 @@
-package com.chanpyaeaung.yangonbuses.views;
+package com.theinhtikeaung.yangonbuses.views;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.chanpyaeaung.yangonbuses.R;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import com.theinhtikeaung.yangonbuses.R;
 
 /**
  * Created by chanpyaeaung on 5/10/16.

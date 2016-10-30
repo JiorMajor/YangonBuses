@@ -1,10 +1,10 @@
-package com.chanpyaeaung.yangonbuses.activities;
+package com.theinhtikeaung.yangonbuses.activities;
 
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.chanpyaeaung.yangonbuses.statics.FragmentGroup;
+import com.theinhtikeaung.yangonbuses.statics.FragmentGroup;
 
 import java.util.ArrayList;
 

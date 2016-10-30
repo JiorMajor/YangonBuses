@@ -1,4 +1,4 @@
-package com.chanpyaeaung.yangonbuses.fragments;
+package com.theinhtikeaung.yangonbuses.fragments;
 
 
 import android.os.Bundle;
@@ -10,14 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.chanpyaeaung.yangonbuses.R;
-import com.chanpyaeaung.yangonbuses.adapters.BusLinesAdapter;
+import com.theinhtikeaung.yangonbuses.R;
+import com.theinhtikeaung.yangonbuses.adapters.BusLinesAdapter;
 
 import java.util.Arrays;
 import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.

@@ -1,4 +1,4 @@
-package com.chanpyaeaung.yangonbuses;
+package com.theinhtikeaung.yangonbuses;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.chanpyaeaung.yangonbuses", appContext.getPackageName());
+        assertEquals("com.chanpyaeaung.com.theinhtikeaung.yangonbuses", appContext.getPackageName());
     }
 }

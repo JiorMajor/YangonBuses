@@ -1,15 +1,13 @@
-package com.chanpyaeaung.yangonbuses.adapters;
+package com.theinhtikeaung.yangonbuses.adapters;
 
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.chanpyaeaung.yangonbuses.R;
-import com.chanpyaeaung.yangonbuses.views.BusLineViewHolder;
+import com.theinhtikeaung.yangonbuses.R;
+import com.theinhtikeaung.yangonbuses.views.BusLineViewHolder;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

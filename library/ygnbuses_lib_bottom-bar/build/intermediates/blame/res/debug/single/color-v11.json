@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+        "merged": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+        "merged": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     }
 ]

@@ -1,4 +1,4 @@
-package com.chanpyaeaung.yangonbuses;
+package com.theinhtikeaung.yangonbuses;
 
 import org.junit.Test;
 

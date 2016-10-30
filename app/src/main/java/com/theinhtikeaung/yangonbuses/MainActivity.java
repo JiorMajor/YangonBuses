@@ -1,24 +1,28 @@
-package com.chanpyaeaung.yangonbuses;
+package com.theinhtikeaung.yangonbuses;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.support.annotation.IdRes;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.widget.SearchView;
+import android.util.AttributeSet;
+import android.view.Menu;
+import android.view.View;
 import android.widget.FrameLayout;
 
-import com.chanpyaeaung.yangonbuses.activities.SuperActivity;
-import com.chanpyaeaung.yangonbuses.fragments.BusesFragment;
-import com.chanpyaeaung.yangonbuses.fragments.MainTabFragment;
+import com.theinhtikeaung.yangonbuses.activities.SuperActivity;
+import com.theinhtikeaung.yangonbuses.fragments.BusesFragment;
+import com.theinhtikeaung.yangonbuses.fragments.MainTabFragment;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class MainActivity extends SuperActivity {
 
     private BottomBar bottomBar;
     private FrameLayout frameLayout;
+    private SearchView searchView;
 
     private void initUI() {
         bottomBar = (BottomBar) findViewById(R.id.bottom_bar);
@@ -67,6 +71,37 @@ public class MainActivity extends SuperActivity {
 
 
     }
+
+    @Override
+    public View onCreateView(String name, Context context, AttributeSet attrs) {
+        try {
+            searchView.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View view, boolean b) {
+                    if(view.hasFocus()) {
+                        bottomBar.setVisibility(View.GONE);
+                    } else {
+                        bottomBar.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return super.onCreateView(name, context, attrs);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search_menu, menu);
+        // Retrieve the search view and plug it into the SearchManager
+        searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
+        searchView.setQueryHint("Search...");
+        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        return true;
+    }
+
 
     @Override
     public void onBackPressed() {

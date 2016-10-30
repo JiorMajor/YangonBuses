@@ -1,4 +1,4 @@
-package com.chanpyaeaung.yangonbuses.statics;
+package com.theinhtikeaung.yangonbuses.statics;
 
 import android.support.v4.app.Fragment;
 

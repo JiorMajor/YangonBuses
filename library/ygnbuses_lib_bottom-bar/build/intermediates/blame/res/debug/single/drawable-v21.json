@@ -1,14 +1,14 @@
 [
     {
-        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
-        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-v21/abc_action_bar_item_background_material.xml"
+        "merged": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-v21/abc_edit_text_material.xml"
     },
     {
-        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
-        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-v21/abc_edit_text_material.xml"
+        "merged": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-v21/abc_action_bar_item_background_material.xml"
     },
     {
-        "merged": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
-        "source": "/Users/chanpyaeaung/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-v21/abc_btn_colored_material.xml"
+        "merged": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-v21/abc_btn_colored_material.xml"
     }
 ]
