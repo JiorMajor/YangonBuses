@@ -14,9 +14,10 @@ public class BusLineViewHolder extends RecyclerView.ViewHolder {
 
     public TextView tvCompany, tvBusLine;
 
+
     public BusLineViewHolder(View itemView) {
         super(itemView);
-        tvBusLine = (TextView) itemView.findViewById(R.id.tvBusLine);
+        tvBusLine = (TextView) itemView.findViewById(R.id.tvBusName);
         tvCompany = (TextView) itemView.findViewById(R.id.tvCompany);
     }
 }

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/ygnbuses_lib_bottom-bar/ygnbuses_lib_bottom-bar.iml" filepath="$PROJECT_DIR$/library/ygnbuses_lib_bottom-bar/ygnbuses_lib_bottom-bar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/ygnbuses_persistent_search_lib/ygnbuses_persistent_search_lib.iml" filepath="$PROJECT_DIR$/library/ygnbuses_persistent_search_lib/ygnbuses_persistent_search_lib.iml" />
     </modules>
   </component>
 </project>

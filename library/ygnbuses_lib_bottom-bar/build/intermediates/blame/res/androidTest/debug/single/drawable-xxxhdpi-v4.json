@@ -48,12 +48,12 @@
         "source": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png",
-        "source": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png"
-    },
-    {
         "merged": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
         "source": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png",
+        "source": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/res/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
         "merged": "/Users/johnmajor/Developer/Android/YangonBuses/library/ygnbuses_lib_bottom-bar/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png",

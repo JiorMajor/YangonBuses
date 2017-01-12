@@ -8,10 +8,10 @@
         id="@+id/tab_bus_stop"
         icon="@drawable/ic_action_bus_stop"
         title="Bus Stops" />
-    <tab
-        id="@+id/tab_places"
-        icon="@drawable/ic_action_places"
-        title="Places" />
+    <!--<tab-->
+        <!--id="@+id/tab_places"-->
+        <!--icon="@drawable/ic_action_places"-->
+        <!--title="Places" />-->
     <tab
         id="@+id/tab_more"
         icon="@drawable/ic_action_more"

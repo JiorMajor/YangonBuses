@@ -1,2 +1,3 @@
 include ':library:ygnbuses_lib_bottom-bar'
+include ':library:ygnbuses_persistent_search_lib'
 include ':app'

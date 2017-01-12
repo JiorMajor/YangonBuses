@@ -53,11 +53,11 @@ public class MainActivity extends SuperActivity {
                                 .disallowAddToBackStack()
                                 .commit();
                         break;
-                    case R.id.tab_places:
-                        transaction.replace(R.id.frame_layout, frag)
-                                .disallowAddToBackStack()
-                                .commit();
-                        break;
+//                    case R.id.tab_places:
+//                        transaction.replace(R.id.frame_layout, frag)
+//                                .disallowAddToBackStack()
+//                                .commit();
+//                        break;
                     case R.id.tab_more:
                         transaction.replace(R.id.frame_layout, frag)
                                 .disallowAddToBackStack()
