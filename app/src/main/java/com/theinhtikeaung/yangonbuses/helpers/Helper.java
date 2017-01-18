@@ -11,6 +11,15 @@ import android.view.View;
 import android.widget.Toolbar;
 
 import com.theinhtikeaung.yangonbuses.R;
+import com.theinhtikeaung.yangonbuses.constants.Api;
+
+import java.io.InputStream;
+import java.security.KeyStore;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateFactory;
+
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManagerFactory;
 
 /**
  * Created by johnmajor on 10/1/17.

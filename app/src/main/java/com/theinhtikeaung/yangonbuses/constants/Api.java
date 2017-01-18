@@ -15,6 +15,7 @@ public class Api {
     private static Api _api = null;
     private static final String TAG = "Api";
 
+
     public static Api getInstance(Context context) {
         if(_api == null) {
             _api = new Api();
@@ -23,17 +24,24 @@ public class Api {
         return _api;
     }
 
-    public static String BASE_URL = "http://apps701.yemaw.me/yangonbuses_api_v3";
-    public static String BUS_LINES = BASE_URL+"/busline/search";
-    public static String BUS_STOPS = BASE_URL+"/busstop-cluster/search";
+//    public static String BASE_URL = "http://apps701.yemaw.me/yangonbuses_api_v3";
+//    public static String BUS_LINES = "/busline/search";
+//    public static String BUS_STOPS = "/busstop-cluster/search";
 
+
+    // Encrypted
+    public static String BASE_URL = "0Xbi2uHRmCRxXKloF5mfF3wFwx+VbKNg6/ikALoc3ZYy2lsjq5KmYkHYwEFHvC3U";
+    public static String BUS_LINES = "s6F1CWh4onTI0w8BXoO1Dg==";
+    public static String BUS_STOPS = "Y6JHKHZPhxRgTPdobkZgGVhtfVD2cI2k8V39DYjSbZU=";
 
     /**
      ********************************************************************************************************************************************
      */
 
     private String[] urls = {
-            BASE_URL
+            BASE_URL,
+            BUS_LINES,
+            BUS_STOPS
     };
 
 
@@ -58,9 +66,9 @@ public class Api {
         }
     }
 
-    public void print(String[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            Log.e(TAG, "encrypted: "+ decrypt(arr[i]) );
+    public void print() {
+        for (int i = 0; i < urls.length; i++) {
+            Log.e(TAG, "encrypted: "+ encrypt(urls[i]) );
         }
     }
 
@@ -69,7 +77,16 @@ public class Api {
      */
 
     public String getBaseUrl() {
-        return BASE_URL;
+        return decrypt(BASE_URL);
+    }
+
+
+    public String getBusLines() {
+        return getBaseUrl() + decrypt(BUS_LINES);
+    }
+
+    public String getBusStops() {
+        return getBaseUrl() + decrypt(BUS_STOPS);
     }
 
 

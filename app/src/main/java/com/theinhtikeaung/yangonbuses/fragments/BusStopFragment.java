@@ -13,27 +13,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.quinny898.library.persistentsearch.SearchBox;
 import com.theinhtikeaung.yangonbuses.R;
-import com.theinhtikeaung.yangonbuses.adapters.BusAdapter;
 import com.theinhtikeaung.yangonbuses.adapters.BusLinesAdapter;
+import com.theinhtikeaung.yangonbuses.adapters.BusStopAdapter;
 import com.theinhtikeaung.yangonbuses.api.YangonBusesService;
-import com.theinhtikeaung.yangonbuses.constants.Api;
 import com.theinhtikeaung.yangonbuses.constants.Application;
 import com.theinhtikeaung.yangonbuses.factory.ServiceFactory;
-import com.theinhtikeaung.yangonbuses.models.Bus;
-import com.theinhtikeaung.yangonbuses.models.buses.BusLine;
-
-import org.reactivestreams.Subscriber;
-import org.reactivestreams.Subscription;
+import com.theinhtikeaung.yangonbuses.models.busstop.BusStop;
+import com.theinhtikeaung.yangonbuses.models.busstop.BusstopsCluster;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
@@ -41,32 +37,27 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BusesFragment extends SuperRootFragment{
+public class BusStopFragment extends SuperRootFragment {
+
 
     private View v;
-    private BusLinesAdapter adapter;
-    private BusAdapter busAdapter;
-    private RecyclerView recyclerView;
-    private ArrayList<Bus> buses;
     private SearchBox searchBox;
     private Toolbar toolbar;
     private LinearLayout LLSearch;
     private Snackbar snackbar;
     private CoordinatorLayout coordinatorLayout;
+    private RecyclerView recyclerView;
 
-    private com.theinhtikeaung.yangonbuses.models.buses.Bus myBus;
-    private ArrayList<BusLine> busLines;
+    private BusStop mybusStop;
+    private ArrayList<BusstopsCluster> busstopsClusters;
 
-    private static final int API_GET_BUSLINES = 9001;
+    private BusStopAdapter busStopAdapter;
 
-    private static final String TAG = "BusesFragment";
-
-    public BusesFragment() {
+    public BusStopFragment() {
         // Required empty public constructor
     }
 
     private void initUI() {
-
         coordinatorLayout = (CoordinatorLayout) v.findViewById(R.id.coordinatorLayout);
         recyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
         searchBox = (SearchBox) v.findViewById(R.id.searchbox);
@@ -80,6 +71,7 @@ public class BusesFragment extends SuperRootFragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.fragment_buses, container, false);
+
         return v;
     }
 
@@ -87,17 +79,16 @@ public class BusesFragment extends SuperRootFragment{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         initUI();
 
-        searchBox.getSearch().setHint("Search Bus Lines....");
+        searchBox.getSearch().setHint("Search Bus Stops....");
         openSearch();
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
-
-        getBusLines();
-
+        getBusStops();
     }
 
 
@@ -138,32 +129,22 @@ public class BusesFragment extends SuperRootFragment{
     }
 
 
-    View.OnClickListener clickListenerToPreviousScreen = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-
-        }
-    };
-
-
-    private void getBusLines() {
-
+    private void getBusStops() {
         YangonBusesService service = ServiceFactory.createRetrofitService(YangonBusesService.class, Application.BASE_URL);
-        service.getBusline()
+        service.getBusStops()
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<com.theinhtikeaung.yangonbuses.models.buses.Bus>() {
+                .subscribe(new Observer<BusStop>() {
                     @Override
                     public void onSubscribe(Disposable d) {
-
                     }
 
                     @Override
-                    public void onNext(com.theinhtikeaung.yangonbuses.models.buses.Bus bus) {
-                        myBus = bus;
-                        busLines = myBus.getData().getBuslines();
-                        busAdapter = new BusAdapter(getActivity(), busLines);
-                        recyclerView.setAdapter(busAdapter);
+                    public void onNext(BusStop busStop) {
+                        mybusStop = busStop;
+                        busstopsClusters = mybusStop.getData().getBusstopsClusters();
+                        busStopAdapter = new BusStopAdapter(getActivity(), busstopsClusters);
+                        recyclerView.setAdapter(busStopAdapter);
                     }
 
                     @Override

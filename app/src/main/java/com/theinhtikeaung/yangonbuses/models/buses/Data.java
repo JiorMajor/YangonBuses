@@ -3,6 +3,7 @@ package com.theinhtikeaung.yangonbuses.models.buses;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,13 +14,13 @@ public class Data {
 
     @SerializedName("buslines")
     @Expose
-    private List<BusLine> buslines = null;
+    private ArrayList<BusLine> buslines = null;
 
-    public List<BusLine> getBuslines() {
+    public ArrayList<BusLine> getBuslines() {
         return buslines;
     }
 
-    public void setBuslines(List<BusLine> buslines) {
+    public void setBuslines(ArrayList<BusLine> buslines) {
         this.buslines = buslines;
     }
 

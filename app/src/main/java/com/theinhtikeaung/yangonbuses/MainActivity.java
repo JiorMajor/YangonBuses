@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.theinhtikeaung.yangonbuses.activities.SuperActivity;
+import com.theinhtikeaung.yangonbuses.constants.Api;
+import com.theinhtikeaung.yangonbuses.fragments.BusStopFragment;
 import com.theinhtikeaung.yangonbuses.fragments.BusesFragment;
 import com.theinhtikeaung.yangonbuses.fragments.MainTabFragment;
 import com.roughike.bottombar.BottomBar;
@@ -22,7 +24,6 @@ public class MainActivity extends SuperActivity {
 
     private BottomBar bottomBar;
     private FrameLayout frameLayout;
-    private SearchView searchView;
 
     private void initUI() {
         bottomBar = (BottomBar) findViewById(R.id.bottom_bar);
@@ -34,6 +35,8 @@ public class MainActivity extends SuperActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initUI();
+
+//        Api.getInstance(this).print();
 
 
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
@@ -49,7 +52,8 @@ public class MainActivity extends SuperActivity {
                                 .commit();
                         break;
                     case R.id.tab_bus_stop:
-                        transaction.replace(R.id.frame_layout, frag)
+                        BusStopFragment busStopFragment = new BusStopFragment();
+                        transaction.replace(R.id.frame_layout, busStopFragment)
                                 .disallowAddToBackStack()
                                 .commit();
                         break;
@@ -74,20 +78,6 @@ public class MainActivity extends SuperActivity {
 
     @Override
     public View onCreateView(String name, Context context, AttributeSet attrs) {
-        try {
-            searchView.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                @Override
-                public void onFocusChange(View view, boolean b) {
-                    if(view.hasFocus()) {
-                        bottomBar.setVisibility(View.GONE);
-                    } else {
-                        bottomBar.setVisibility(View.VISIBLE);
-                    }
-                }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         return super.onCreateView(name, context, attrs);
     }
 
@@ -95,10 +85,6 @@ public class MainActivity extends SuperActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.search_menu, menu);
         // Retrieve the search view and plug it into the SearchManager
-        searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
-        searchView.setQueryHint("Search...");
-        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         return true;
     }
 

@@ -1,13 +1,14 @@
-package com.theinhtikeaung.yangonbuses.models.buses;
+package com.theinhtikeaung.yangonbuses.models.busstop;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by johnmajor on 13/1/17.
+ * Created by johnmajor on 18/1/17.
  */
 
 public class Meta {
+
     @SerializedName("stutus")
     @Expose
     private String stutus;
@@ -30,4 +31,5 @@ public class Meta {
     public void setResultsCount(Integer resultsCount) {
         this.resultsCount = resultsCount;
     }
+
 }

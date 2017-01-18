@@ -8,7 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.theinhtikeaung.yangonbuses.R;
+import com.theinhtikeaung.yangonbuses.constants.Application;
 import com.theinhtikeaung.yangonbuses.models.Bus;
+import com.theinhtikeaung.yangonbuses.models.buses.BusLine;
 import com.theinhtikeaung.yangonbuses.views.BusViewHolder;
 
 import java.util.ArrayList;
@@ -21,9 +23,9 @@ public class BusAdapter extends RecyclerView.Adapter {
 
 
     private Context context;
-    private ArrayList<Bus> busList;
+    private ArrayList<BusLine> busList;
 
-    public BusAdapter(Context context, ArrayList<Bus> busList) {
+    public BusAdapter(Context context, ArrayList<BusLine> busList) {
         this.context = context;
         this.busList = busList;
     }
@@ -37,29 +39,66 @@ public class BusAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
-        Bus myBus = busList.get(position);
+        BusLine myBusLine = busList.get(position);
 
         BusViewHolder busViewHolder = (BusViewHolder) holder;
-        busViewHolder.tvBusName.setText(myBus.getBusName());
-        busViewHolder.tvBusName.setTextColor(Color.parseColor(myBus.getBusColorStr()));
-        busViewHolder.llBusColor.setBackgroundColor(Color.parseColor(myBus.getBusColorStr()));
-//        busViewHolder.cardView.setCardBackgroundColor(Color.parseColor(myBus.getBusColorStr()));
-        busViewHolder.tvStart.setTextColor(Color.parseColor(myBus.getBusColorStr()));
-        busViewHolder.tvEnd.setTextColor(Color.parseColor(myBus.getBusColorStr()));
+        busViewHolder.tvBusName.setText(myBusLine.getNameMy());
 
-        if(myBus.getBusColorStr().equalsIgnoreCase("#96509F")) {
-            busViewHolder.ivLogo.setImageResource(R.drawable.ic_bus_purple);
-        } else if(myBus.getBusColorStr().equalsIgnoreCase("#405CAA")) {
-            busViewHolder.ivLogo.setImageResource(R.drawable.ic_bus_blue);
-        } else if(myBus.getBusColorStr().equalsIgnoreCase("#F05452")) {
-            busViewHolder.ivLogo.setImageResource(R.drawable.ic_bus_orange);
-        } else if(myBus.getBusColorStr().equalsIgnoreCase("#2C8A6C")) {
-            busViewHolder.ivLogo.setImageResource(R.drawable.ic_bus_green);
-        } else if(myBus.getBusColorStr().equalsIgnoreCase("#86603E")) {
-            busViewHolder.ivLogo.setImageResource(R.drawable.ic_bus_green);
-        } else {
-            busViewHolder.ivLogo.setImageResource(R.drawable.icn_bus);
+        if(myBusLine.getColor().toString().compareToIgnoreCase("1") == 0) {
+            busViewHolder.llBusColor.setBackgroundColor(Color.parseColor(Application.COLOR_1));
+            busViewHolder.tvBusName.setTextColor(Color.parseColor(Application.COLOR_1));
+            busViewHolder.ivLogo.setImageResource(Application.DRAWABLE_1);
+//            busViewHolder.tvStart.setTextColor(Color.parseColor(Application.COLOR_1));
+//            busViewHolder.tvEnd.setTextColor(Color.parseColor(Application.COLOR_1));
         }
+        else if(myBusLine.getColor().toString().compareToIgnoreCase("2") == 0) {
+            busViewHolder.llBusColor.setBackgroundColor(Color.parseColor(Application.COLOR_2));
+            busViewHolder.tvBusName.setTextColor(Color.parseColor(Application.COLOR_2));
+            busViewHolder.ivLogo.setImageResource(Application.DRAWABLE_2);
+//            busViewHolder.tvStart.setTextColor(Color.parseColor(Application.COLOR_2));
+//            busViewHolder.tvEnd.setTextColor(Color.parseColor(Application.COLOR_2));
+        }
+        else if(myBusLine.getColor().toString().compareToIgnoreCase("3") == 0) {
+            busViewHolder.llBusColor.setBackgroundColor(Color.parseColor(Application.COLOR_3));
+            busViewHolder.tvBusName.setTextColor(Color.parseColor(Application.COLOR_3));
+            busViewHolder.ivLogo.setImageResource(Application.DRAWABLE_3);
+//            busViewHolder.tvStart.setTextColor(Color.parseColor(Application.COLOR_3));
+//            busViewHolder.tvEnd.setTextColor(Color.parseColor(Application.COLOR_3));
+        }
+        else if(myBusLine.getColor().toString().compareToIgnoreCase("4") == 0) {
+            busViewHolder.llBusColor.setBackgroundColor(Color.parseColor(Application.COLOR_4));
+            busViewHolder.tvBusName.setTextColor(Color.parseColor(Application.COLOR_4));
+            busViewHolder.ivLogo.setImageResource(Application.DRAWABLE_4);
+//            busViewHolder.tvStart.setTextColor(Color.parseColor(Application.COLOR_4));
+//            busViewHolder.tvEnd.setTextColor(Color.parseColor(Application.COLOR_4));
+        }
+        else if(myBusLine.getColor().toString().compareToIgnoreCase("5") == 0) {
+            busViewHolder.llBusColor.setBackgroundColor(Color.parseColor(Application.COLOR_5));
+            busViewHolder.tvBusName.setTextColor(Color.parseColor(Application.COLOR_5));
+            busViewHolder.ivLogo.setImageResource(Application.DRAWABLE_5);
+//            busViewHolder.tvStart.setTextColor(Color.parseColor(Application.COLOR_4));
+//            busViewHolder.tvEnd.setTextColor(Color.parseColor(Application.COLOR_4));
+        }
+        else {
+            busViewHolder.llBusColor.setBackgroundColor(Color.parseColor(Application.COLOR_0));
+            busViewHolder.tvBusName.setTextColor(Color.parseColor(Application.COLOR_0));
+            busViewHolder.ivLogo.setImageResource(Application.DRAWABLE_0);
+//            busViewHolder.tvStart.setTextColor(Color.parseColor(Application.COLOR_0));
+//            busViewHolder.tvEnd.setTextColor(Color.parseColor(Application.COLOR_0));
+        }
+
+//            busViewHolder.ivLogo.setImageResource(R.drawable.ic_bus_purple);
+//        } else if(myBus.getBusColorStr().equalsIgnoreCase("#405CAA")) {
+//            busViewHolder.ivLogo.setImageResource(R.drawable.ic_bus_blue);
+//        } else if(myBus.getBusColorStr().equalsIgnoreCase("#F05452")) {
+//            busViewHolder.ivLogo.setImageResource(R.drawable.ic_bus_orange);
+//        } else if(myBus.getBusColorStr().equalsIgnoreCase("#2C8A6C")) {
+//            busViewHolder.ivLogo.setImageResource(R.drawable.ic_bus_green);
+//        } else if(myBus.getBusColorStr().equalsIgnoreCase("#86603E")) {
+//            busViewHolder.ivLogo.setImageResource(R.drawable.ic_bus_green);
+//        } else {
+//            busViewHolder.ivLogo.setImageResource(R.drawable.icn_bus);
+//        }
 
     }
 

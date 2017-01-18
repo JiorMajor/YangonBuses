@@ -17,7 +17,7 @@ import com.theinhtikeaung.yangonbuses.R;
 
 public class BusViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView tvBusName, tvStart, tvEnd;
+    public TextView tvBusName;
     public LinearLayout llBusColor;
     public ImageView ivLogo;
     public CardView cardView;
@@ -28,7 +28,7 @@ public class BusViewHolder extends RecyclerView.ViewHolder {
         llBusColor = (LinearLayout) itemView.findViewById(R.id.llBusColor);
         ivLogo = (ImageView) itemView.findViewById(R.id.ivLogo);
 //        cardView = (CardView) itemView.findViewById(R.id.cardView);
-        tvStart = (TextView) itemView.findViewById(R.id.tvStart);
-        tvEnd = (TextView) itemView.findViewById(R.id.tvEnd);
+//        tvStart = (TextView) itemView.findViewById(R.id.tvStart);
+//        tvEnd = (TextView) itemView.findViewById(R.id.tvEnd);
     }
 }
